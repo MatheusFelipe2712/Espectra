@@ -1,0 +1,21 @@
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 colunas com tamanho igual */
+    height: 80px;
+}
+
+.grid-item {
+    background-color: #6F42C1;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.grid-item > h1 {
+    margin: 10px;
+}
+
+.grid-item > p {
+    text-align: left; /* Alinha o texto à esquerda */
+    margin: 0;        /* Remover margens extras */
+    justify-self: start; /* Alinha o <p> à esquerda dentro da célula do grid */
+}
