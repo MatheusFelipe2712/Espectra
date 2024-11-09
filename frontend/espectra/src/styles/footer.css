@@ -1,0 +1,11 @@
+.rodape{
+    height: 10px;
+    color: black;  
+    background-color: #000080;
+    display: flex;
+    justify-content: end;
+    height: 30px;
+    text-align: justify;
+    color: white;
+
+}

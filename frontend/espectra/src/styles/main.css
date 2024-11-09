@@ -1,3 +1,17 @@
-div{
-    background-color: red;
+main {
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center;     /* Centraliza verticalmente */
+    width: 100%;             /* Garante que o main ocupe toda a largura */
+}
+
+.search {
+    padding: 10px;
+    font-size: 1rem;
+    border: 3px solid #000080;
+    border-radius: 30px;
+    width: 30%;              /* Aumenta a largura para 60% do contêiner */
+    max-width: 600px;        /* Define uma largura máxima de 600px */
+    height: 10%;
+    text-align: center;
 }

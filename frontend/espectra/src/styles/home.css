@@ -1,0 +1,37 @@
+html, body {
+    height: 100%; /* Garante que o html e o body ocupem toda a altura da tela */
+    margin: 0;    /* Remove as margens padrão */
+}
+
+.home {
+    display: grid;
+    grid-template-columns: 1fr; /* Uma coluna para o layout */
+    grid-template-rows: auto 1fr auto; /* 3 linhas: nav, main, footer */
+    grid-template-areas: 
+        "nav"   /* A área para o nav */
+        "main"  /* A área para o main */
+        "footer"; /* A área para o footer */
+    height: 100vh; /* Garante que a grid ocupe 100% da altura da tela */
+}
+
+nav.nav {
+    grid-area: nav;
+    background-color: #6F42C1;
+    padding: 20px;
+    text-align: center;
+    border: 2px solid red; /* Borda do Nav */
+}
+
+main.main {
+    grid-area: main;
+    background-color: #f4f4f4;
+    padding: 20px;
+    text-align: center;
+    border: 2px solid green; /* Borda do Main */
+    min-height: 200px; /* Define uma altura mínima para o Main */
+}
+
+footer.footer {
+    grid-area: footer;
+
+}

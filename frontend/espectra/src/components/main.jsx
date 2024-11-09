@@ -1,8 +1,8 @@
 import React from "react";
-import "../styles/main.css"
+import "../styles/main.css";
 
 export default (props) => (
-    <div className="main">
-   
-    </div>
-)
+  <main>
+    <input type="search" className="search" placeholder="PESQUISE... 💡" />
+  </main>
+);
