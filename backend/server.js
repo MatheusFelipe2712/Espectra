@@ -1,15 +1,19 @@
 const express = require("express");
 const axios = require("axios");
-const cors = require("cors");  // Importa o CORS
+const cors = require("cors");
+require("dotenv").config();  // Carrega variáveis de ambiente do arquivo .env
+
 const app = express();
 const port = 5000;
 
-// Habilitar o CORS para todas as origens (por enquanto)
-app.use(cors());  // Isso permite que qualquer domínio faça requisições para o seu servidor
+// Habilitar o CORS para todas as origens
+app.use(cors());
 
 app.get("/api/search", async (req, res) => {
   const { query } = req.query; // Recebe o parâmetro de pesquisa da query string
-  const API_KEY = "AIzaSyCyV9rR7dhBgpwQe_VB3XbrNsajYQa6rWo"; // Substitua pela sua chave da API
+  
+  // Agora, a chave da API vem do .env
+  const API_KEY = process.env.YOUTUBE_API_KEY;
 
   if (!query) {
     return res.status(400).send("Query parameter is required.");
